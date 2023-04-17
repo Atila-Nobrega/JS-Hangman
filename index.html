@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./hangman.js"></script>
+    <title>Hangman App</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="overlay" onclick="closeOverlay()">
+        <div id="overlay-text"></div>
+        <div id="overlay-subtext"> press anywhere to close</div>
+      </div>
+
+      <div id="introduction">
+        <h2>Hangman: Guess the book name!</h2>
+        <p>Instructions: Choose letters in the keyboard to guess the book name! You can also type and submit a guess or Restart the game by pressing the reset button.</p>
+        <p>Remember: You lose if you make six incorrect guesses or submit a wrong title. Also every line is a word from it's title.</p>
+        <p>After the game you can click on the book to go to it's amazon page for more info!</p>
+      </div>
+
+      <div id="book-info" class="book"></div>
+
+      <div id="game-screen">
+        <ul></ul>
+
+        <canvas width="400" height="400"></canvas>
+      </div>
+
+      <div id="keyboardArea" class="keyboardArea"></div>
+
+    </div>
+
+    <form onsubmit="onSubmitGuess()">
+      <input type="text" placeholder="Try to Guess the word!" required>
+      <button id="submit-guess" type="submit">Submit Guess</button>
+    </form>
+
+    <button id="button-reset" onclick="init()">Reset</button>
+  </body>
+</html>

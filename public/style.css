@@ -1,0 +1,96 @@
+.keyboardArea {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(3, 50px);
+  gap:5px;
+}
+
+.key {
+  position:relative;
+  background-color: rgb(56, 56, 56);
+  color: white
+}
+
+.key-correct {
+  background-color: rgb(39, 148, 39);
+}
+
+.key-incorrect {
+  background-color: rgb(164, 30, 30);
+}
+
+ul {
+  float: left;
+  width: 500px;
+  word-spacing:9999px;
+}
+
+li {
+  display: inline;
+  font-size: 3rem;
+  padding-right: 10px;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  visibility: hidden;
+  opacity: 0;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  transition: opacity 1s, visibility 1s;
+}
+
+#overlay-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10rem;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#overlay-subtext{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  font-size: 3rem;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+form {
+  padding: 10px;
+}
+
+#book-info {
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.4s;
+  width: 20rem;
+}
+
+#book-info:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+img {
+  width:20rem;
+}
+
+h3 {
+  padding: 15px;
+}
